@@ -23,7 +23,7 @@ public class Main extends JavaPlugin {
   }
 
   private Configuration getConfiguration() throws IOException {
-    var path = getDataFolder() + "/data/friends.json";
+    var path = getDataFolder() + "/configuration.json";
     var serializer = new JsonSerializer();
     var configurationGetter = new FlatfileConfigurationGetter(serializer, path);
     return configurationGetter.getConfiguration();
