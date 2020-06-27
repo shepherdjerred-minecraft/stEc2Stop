@@ -11,7 +11,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>stEc2Stop</artifactId>
+    <artifactId>ec2-stop</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <name>stEc2Stop</name>
