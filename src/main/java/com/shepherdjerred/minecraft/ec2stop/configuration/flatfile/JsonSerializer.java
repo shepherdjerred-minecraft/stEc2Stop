@@ -1,8 +1,8 @@
-package com.shepherdjerred.thestorm.ec2stop.configuration.flatfile;
+package com.shepherdjerred.minecraft.ec2stop.configuration.flatfile;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.shepherdjerred.thestorm.ec2stop.configuration.Configuration;
+import com.shepherdjerred.minecraft.ec2stop.configuration.Configuration;
 
 public class JsonSerializer implements Serializer {
   private final Gson gson;

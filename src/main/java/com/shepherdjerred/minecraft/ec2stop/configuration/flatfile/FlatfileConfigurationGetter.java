@@ -1,6 +1,6 @@
-package com.shepherdjerred.thestorm.ec2stop.configuration.flatfile;
+package com.shepherdjerred.minecraft.ec2stop.configuration.flatfile;
 
-import com.shepherdjerred.thestorm.ec2stop.configuration.Configuration;
+import com.shepherdjerred.minecraft.ec2stop.configuration.Configuration;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

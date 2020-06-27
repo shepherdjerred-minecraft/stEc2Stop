@@ -1,4 +1,4 @@
-package com.shepherdjerred.thestorm.ec2stop.stopper;
+package com.shepherdjerred.minecraft.ec2stop.stopper;
 
 import java.io.BufferedReader;
 import java.io.IOException;

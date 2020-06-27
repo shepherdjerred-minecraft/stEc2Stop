@@ -1,4 +1,4 @@
-package com.shepherdjerred.thestorm.ec2stop.configuration;
+package com.shepherdjerred.minecraft.ec2stop.configuration;
 
 import lombok.Value;
 

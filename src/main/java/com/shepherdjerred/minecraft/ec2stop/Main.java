@@ -1,10 +1,10 @@
-package com.shepherdjerred.thestorm.ec2stop;
+package com.shepherdjerred.minecraft.ec2stop;
 
-import com.shepherdjerred.thestorm.ec2stop.configuration.Configuration;
-import com.shepherdjerred.thestorm.ec2stop.configuration.flatfile.FlatfileConfigurationGetter;
-import com.shepherdjerred.thestorm.ec2stop.configuration.flatfile.JsonSerializer;
-import com.shepherdjerred.thestorm.ec2stop.stopper.HttpEc2Stopper;
-import com.shepherdjerred.thestorm.ec2stop.stopper.ScheduledStopper;
+import com.shepherdjerred.minecraft.ec2stop.configuration.Configuration;
+import com.shepherdjerred.minecraft.ec2stop.stopper.ScheduledStopper;
+import com.shepherdjerred.minecraft.ec2stop.configuration.flatfile.FlatfileConfigurationGetter;
+import com.shepherdjerred.minecraft.ec2stop.configuration.flatfile.JsonSerializer;
+import com.shepherdjerred.minecraft.ec2stop.stopper.HttpEc2Stopper;
 import java.io.IOException;
 import lombok.SneakyThrows;
 import org.bukkit.plugin.java.JavaPlugin;

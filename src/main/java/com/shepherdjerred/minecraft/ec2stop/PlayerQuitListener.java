@@ -1,6 +1,6 @@
-package com.shepherdjerred.thestorm.ec2stop;
+package com.shepherdjerred.minecraft.ec2stop;
 
-import com.shepherdjerred.thestorm.ec2stop.stopper.Ec2Stopper;
+import com.shepherdjerred.minecraft.ec2stop.stopper.Ec2Stopper;
 import java.io.IOException;
 import lombok.AllArgsConstructor;
 import org.bukkit.event.EventHandler;

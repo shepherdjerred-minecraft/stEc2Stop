@@ -1,4 +1,4 @@
-package com.shepherdjerred.thestorm.ec2stop;
+package com.shepherdjerred.minecraft.ec2stop;
 
 public class StopperDecider {
 

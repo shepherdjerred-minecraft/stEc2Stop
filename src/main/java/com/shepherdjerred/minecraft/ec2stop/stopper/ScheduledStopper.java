@@ -1,6 +1,6 @@
-package com.shepherdjerred.thestorm.ec2stop.stopper;
+package com.shepherdjerred.minecraft.ec2stop.stopper;
 
-import com.shepherdjerred.thestorm.ec2stop.StopperDecider;
+import com.shepherdjerred.minecraft.ec2stop.StopperDecider;
 import java.util.Timer;
 import java.util.TimerTask;
 import lombok.AllArgsConstructor;
