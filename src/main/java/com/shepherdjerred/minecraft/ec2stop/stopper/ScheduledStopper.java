@@ -1,6 +1,6 @@
 package com.shepherdjerred.minecraft.ec2stop.stopper;
 
-import com.shepherdjerred.minecraft.ec2stop.StopperDecider;
+import com.shepherdjerred.minecraft.ec2stop.BukkitPlayerCountStopperDecider;
 import java.util.Timer;
 import java.util.TimerTask;
 import lombok.AllArgsConstructor;
@@ -9,7 +9,7 @@ import lombok.SneakyThrows;
 @AllArgsConstructor
 public class ScheduledStopper implements Ec2Stopper {
   private final Ec2Stopper delegate;
-  private final StopperDecider decider;
+  private final BukkitPlayerCountStopperDecider decider;
   private final int delay;
 
   @Override

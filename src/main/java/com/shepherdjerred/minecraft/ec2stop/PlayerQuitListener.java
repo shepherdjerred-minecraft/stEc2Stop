@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 @AllArgsConstructor
 public class PlayerQuitListener implements Listener {
-  private final StopperDecider decider;
+  private final BukkitPlayerCountStopperDecider decider;
   private final Ec2Stopper stopper;
 
   @EventHandler
