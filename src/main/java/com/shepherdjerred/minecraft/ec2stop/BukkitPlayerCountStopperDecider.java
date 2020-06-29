@@ -5,6 +5,6 @@ import org.bukkit.Bukkit;
 public class BukkitPlayerCountStopperDecider {
 
   public boolean shouldStop() {
-    return Bukkit.getOnlinePlayers().isEmpty();
+    return Bukkit.getOnlinePlayers().size() == 1;
   }
 }

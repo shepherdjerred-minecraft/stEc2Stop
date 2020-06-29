@@ -10,7 +10,7 @@ import lombok.SneakyThrows;
 public class ScheduledStopper implements Ec2Stopper {
   private final Ec2Stopper delegate;
   private final BukkitPlayerCountStopperDecider decider;
-  private final int delay;
+  private final int delayInMilliseconds;
 
   @Override
   public void stop() {
@@ -25,7 +25,7 @@ public class ScheduledStopper implements Ec2Stopper {
       }
     };
 
-    var timer = new Timer("Timer");
-    timer.schedule(task, delay);
+    var timer = new Timer("Scheduled Stopper Timer");
+    timer.schedule(task, delayInMilliseconds);
   }
 }

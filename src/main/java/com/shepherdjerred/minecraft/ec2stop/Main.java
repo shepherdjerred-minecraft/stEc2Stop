@@ -18,7 +18,7 @@ public class Main extends JavaPlugin {
     var configuration = getConfiguration();
     var stopperDecider = new BukkitPlayerCountStopperDecider();
     var httpEc2Stopper = new HttpEc2Stopper(configuration.getUrl(), configuration.getSecret());
-    var scheduledStopper = new ScheduledStopper(httpEc2Stopper, stopperDecider, configuration.getDelay());
+    var scheduledStopper = new ScheduledStopper(httpEc2Stopper, stopperDecider, configuration.getDelayInSeconds() * 1000);
     getServer().getPluginManager().registerEvents(new PlayerQuitListener(stopperDecider, scheduledStopper), this);
   }
 

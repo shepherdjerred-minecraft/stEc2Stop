@@ -26,22 +26,28 @@ public class HttpEc2Stopper implements Ec2Stopper {
       var http = (HttpURLConnection) connection;
       http.setRequestMethod("POST");
       http.setDoOutput(true);
-      http.setRequestProperty("Content-Type", "application/json; utf-8");
-      http.setRequestProperty("Accept", "application/json");
+      http.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
+      http.setRequestProperty("Accept", "application/json, text/plain, */*");
+
+      log.info("Sending {} to {}", body, url);
 
       try (var outputStream = http.getOutputStream()) {
-        var bodyBytes = body.getBytes();
+        var bodyBytes = body.getBytes(StandardCharsets.UTF_8);
         outputStream.write(bodyBytes);
       }
 
-      try (var bufferedReader = new BufferedReader(new InputStreamReader(http.getInputStream(), StandardCharsets.UTF_8))) {
+      try (var inputReader = new BufferedReader(new InputStreamReader(http.getInputStream(), StandardCharsets.UTF_8))) {
         var stringBuilder = new StringBuilder();
         String responseLine;
-        while ((responseLine = bufferedReader.readLine()) != null) {
+        while ((responseLine = inputReader.readLine()) != null) {
           stringBuilder.append(responseLine);
         }
         var response = stringBuilder.toString();
         log.info("API Response: {}", response);
+      } catch (Exception exception) {
+        try (var errorReader = new BufferedReader(new InputStreamReader(http.getErrorStream(), StandardCharsets.UTF_8))) {
+          errorReader.lines().forEach(log::error);
+        }
       }
     } else {
       log.error("Connection invalid: {}", url);

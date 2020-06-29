@@ -6,5 +6,5 @@ import lombok.Value;
 public class Configuration {
   String url;
   String secret;
-  int delay;
+  int delayInSeconds;
 }
